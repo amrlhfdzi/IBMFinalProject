@@ -52,7 +52,6 @@ public_users.get("/isbn/:isbn", async (req, res) => {
   
 // Get book details based on author
 public_users.get("/author/:author", async (req, res) => {
-    // get array of matching book objects
     const matchingBooks = Object.values(await books).filter(
       (book) => book.author.toLowerCase() === req.params.author.toLowerCase()
     );
