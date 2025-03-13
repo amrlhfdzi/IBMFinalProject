@@ -36,7 +36,6 @@ regd_users.post("/login", (req, res) => {
 });
 
 // Add a book review
-// /customer/auth/:isbn
 regd_users.put("/auth/review/:isbn", (req, res) => {
   const user = req.session.authorization.username;
   const review = req.body.review; // string
